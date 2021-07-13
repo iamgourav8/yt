@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><%= title %></title>
+    <%- include('head') %>
+
+    <style>
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('nav') %>
+    <div class="container">
+        <div class="ansContainer">
+            <h5><%= heading %> for</h5>
+            <p>"<%= resultsForTitle %>"</p>
+
+            <!-- before my result -->
+            <% for(var i = 0; i < 10; i++) { %>
+            <!-- This is my result -->
+            <% if( i == rand ) { %>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="<%= myThumb %>"
+                            class="img-fluid rounded-start d-flex justify-content-start yt-thumbnail"
+                            alt="<%= myTitle %>">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <a href="<%= myLink %>" target="_blank" rel="noopener noreferrer"><h5 class="card-title"><%= myTitle %></h5></a>
+                            <p class="card-text"><small class="text-muted"><%= myPublish %><span class="text-muted"> •
+                                        views <%= myViews %> </span></small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="<%= goni[i].thumbnail %>"
+                            class="img-fluid rounded-start d-flex justify-content-start yt-thumbnail"
+                            alt="<%= goni[i].title %>">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= goni[i].title %></h5>
+                            <p class="card-text"><small class="text-muted"><%= goni[i].uploaded %><span
+                                        class="text-muted"> •
+                                        views <%= goni[i].views %> </span></small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+
+</body>
+
+</html>

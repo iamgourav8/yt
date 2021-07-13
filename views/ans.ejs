@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><%= title %></title>
+    <%- include('head') %>
+</head>
+
+<body>
+    <%- include('nav') %>
+    <div class="container">
+        <h1><%= title %></h1>
+
+        <% for(var i = 0; i < 10; i++) { %>
+        <div class="card mb-3 d-flex flex-column">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="<%= ans[i].thumbnail %>" class="img-fluid rounded-start yt-thumbnail" alt="...">
+                </div>
+                <div class="col-md-9">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= ans[i].title %></h5>
+                        <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                        <p class="card-text"><small class="text-muted"><%= ans[i].uploaded %></small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% } %>
+
+    </div>
+    </div>
+
+</body>
+
+</html>

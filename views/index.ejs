@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Home</title>
+  <style>
+    form {
+      width: 60%;
+      margin: auto;
+      margin-top: 2rem;
+    }
+
+    .heading {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    button[type=submit] {
+      width: 5rem;
+      margin: auto;
+      float: right;
+    }
+  </style>
+  <%- include('head') %>
+</head>
+
+<body>
+  <%- include('nav') %>
+  <div class="container">
+
+    <h1 class="heading">Hello Home!</h1>
+    <form method="POST" action="/goni">
+      <!-- <form> -->
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Enter</span>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" name="link" required>
+      </div>
+      <p>Paste your youtube link</p>
+      <button id="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+  </div>
+
+  <script>
+
+  </script>
+</body>
+
+</html>
