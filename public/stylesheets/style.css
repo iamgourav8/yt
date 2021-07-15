@@ -1,13 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 nav {
   position: fixed;
 }
 
 .ansContainer {
   margin-top: 3.5rem;
-}
-
-.card-title {
-  font-size: 1rem;
 }
 
 .card {
@@ -23,8 +26,48 @@ img.yt-thumbnail {
 
 #submit{
   font-weight: bold;
+  float: right;
 }
 
 a{
   text-decoration: none;
+}
+
+#container, .container{
+  margin-top: 10vh;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin: 10px 2px 5px 5px;
+}
+
+.flex-item-left {
+  background-color: #f1f1f1;
+  flex: 30%;
+  margin: auto;
+  width: 50%;
+}
+
+.flex-item-right {
+  flex: 70%;
+  padding-left: 3%;
+}
+
+h4.titleofvideo {
+  font-size: 0.8rem;
+  margin-bottom: none;
+}
+
+small.pubandview {
+  font-size: 0.6rem;
+  color: gray;
+}
+/* // //////////////////////////// */
+
+.myDiv{
+  border: 1px dashed black;
 }

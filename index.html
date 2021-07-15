@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: nowrap;
+            /* font-size: 2.3vh; */
+            /* text-align: center; */
+            flex-direction: row;
+            margin: 10px 2px 5px 5px;
+        }
+
+        .flex-item-left {
+            background-color: #f1f1f1;
+            flex: 30%;
+            margin: auto;
+            width: 50%;
+        }
+
+        .flex-item-right {
+            flex: 70%;
+            padding-left: 2%;
+        }
+        /* Responsive layout - makes a one column-layout instead of a two-column layout */
+        @media (max-width: 350px) {
+
+            .flex-item-right,
+            .flex-item-left {
+                flex: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-item-left">
+            <img src="/public/images/thumb.png" alt="" width="100%" height="auto">
+        </div>
+        <div class="flex-item-right">
+            <div class="innerFlex">
+                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
+                <small>5 Days ago</small> •
+                <small>views 64654</small>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

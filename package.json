@@ -16,7 +16,8 @@
     "nodemon": "^2.0.12",
     "scrape-youtube": "^2.1.9",
     "serverless-http": "^2.7.0",
-    "updated-youtube-info": "^1.4.7"
+    "updated-youtube-info": "^1.4.7",
+    "youtube-tags": "^1.0.0"
   },
   "devDependencies": {}
 }

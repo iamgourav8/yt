@@ -30,7 +30,7 @@ router.post('/goni', (req, res) => {
     newTitle = newTitle.split('|')
     newTitle = newTitle[0]
     youtube.search(newTitle).then((results) => {
-      
+
       var ans = results.videos
       res.render('goni', {
         title: 'Solfinn',
@@ -45,13 +45,21 @@ router.post('/goni', (req, res) => {
         resultsForTitle: newTitle
       })
     });
-    
-    console.log(newTitle);
-    console.log(link)
-    console.log(rank)
+
+    // console.log(newTitle);
+    // console.log(link)
+    // console.log(rank)
 
   });
 
+
+  // video tags
+  router.get('/tags', function (req, res, next) {
+
+    res.render('tag', {
+      title: 'No Compair',
+    });
+  })
 
 });
 

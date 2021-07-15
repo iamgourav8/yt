@@ -6,7 +6,7 @@
     <%- include('head') %>
 
     <style>
-        a{
+        a {
             text-decoration: none;
         }
     </style>
@@ -23,40 +23,36 @@
             <% for(var i = 0; i < 10; i++) { %>
             <!-- This is my result -->
             <% if( i == rand ) { %>
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="<%= myThumb %>"
-                            class="img-fluid rounded-start d-flex justify-content-start yt-thumbnail"
-                            alt="<%= myTitle %>">
+            <!-- <a href="/tag"> -->
+            <div class="myDiv">
+                <div class="flex-container">
+                    <div class="flex-item-left">
+                        <img src="<%= myThumb %>" alt="<%= myTitle %>" width="100%" height="auto">
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <a href="<%= myLink %>" target="_blank" rel="noopener noreferrer"><h5 class="card-title"><%= myTitle %></h5></a>
-                            <p class="card-text"><small class="text-muted"><%= myPublish %><span class="text-muted"> •
-                                        views <%= myViews %> </span></small></p>
-                        </div>
+                    <div class="flex-item-right">
+                        <h4 class="titleofvideo"><%= myTitle %></h4>
+                        <small class="pubandview"><%= myPublish %></small>
+                        <small class="pubandview">• views <%= myViews %></small>
                     </div>
                 </div>
             </div>
+            <!-- </a> -->
+            <hr>
             <% } %>
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="<%= goni[i].thumbnail %>"
-                            class="img-fluid rounded-start d-flex justify-content-start yt-thumbnail"
-                            alt="<%= goni[i].title %>">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title"><%= goni[i].title %></h5>
-                            <p class="card-text"><small class="text-muted"><%= goni[i].uploaded %><span
-                                        class="text-muted"> •
-                                        views <%= goni[i].views %> </span></small></p>
-                        </div>
-                    </div>
+
+            <!-- <a href="/tag"> -->
+            <div class="flex-container">
+                <div class="flex-item-left">
+                    <img src="<%= goni[i].thumbnail %>" alt="<%= goni[i].title %>" width="100%" height="auto">
+                </div>
+                <div class="flex-item-right">
+                    <h4 class="titleofvideo"><%= goni[i].title %></h4>
+                    <small class="pubandview"><%= goni[i].uploaded %></small>
+                    <small class="pubandview">• views <%= goni[i].views %></small>
                 </div>
             </div>
+            <!-- </a> -->
+            <hr>
             <% } %>
         </div>
     </div>
