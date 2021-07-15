@@ -71,3 +71,7 @@ small.pubandview {
 .myDiv{
   border: 1px dashed black;
 }
+
+hr.hr{
+  margin: 1px;
+}
