@@ -18,9 +18,29 @@ router.get('/', function (req, res, next) {
 })
 
 router.post('/goni', (req, res) => {
+
+  // check youtube url is from destktop(full) or from mobile(short)
+  // let str = "https://www.youtube.com/watch?v=rJl1tGLliLE";
+  
+  // taking input fields
   var link = req.body.link
-  link = link.split('=')
-  link = link[1]
+  // link = link.split('=')
+  // link = link[1]
+  let full = link.includes("https://www.youtube.com/");
+  let shortLink = link.includes("https://www.youtu.be/");
+
+  if (full) {
+    console.log('full')
+    link = link.split('v=')
+    link = link[1]
+  } else if (shortLink) {
+    console.log('half')
+    link = link.split('.be/')
+    link = link[1]
+  } else {
+    console.log('Not YouTube url')
+    res.send('<h1>Please type only YouTube URL</h1>')
+  }
 
 
   // Retrieve video info

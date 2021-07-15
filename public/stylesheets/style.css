@@ -72,6 +72,6 @@ small.pubandview {
   border: 1px dashed black;
 }
 
-/* hr.hr{
-  margin: 1px;
-} */
+hr{
+  font-weight: bold;
+}
