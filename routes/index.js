@@ -28,12 +28,13 @@ router.post('/goni', (req, res) => {
   // link = link[1]
   let full = link.includes("https://www.youtube.com/");
   let shortLink = link.includes("https://www.youtu.be/");
+  let shortLink2 = link.includes("https://youtu.be/");
 
   if (full) {
     console.log('full')
     link = link.split('v=')
     link = link[1]
-  } else if (shortLink) {
+  } else if (shortLink || shortLink2) {
     console.log('half')
     link = link.split('.be/')
     link = link[1]
